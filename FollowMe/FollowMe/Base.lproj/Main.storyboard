@@ -39,6 +39,9 @@
                                         <rect key="frame" x="0.0" y="170" width="150" height="150"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0bF-5Y-VF5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
