@@ -72,7 +72,7 @@ class ViewController: UIViewController, UIAlertViewDelegate {
         var originalColor : UIColor? = button.backgroundColor
         var highlightColor : UIColor = UIColor.whiteColor()
 
-        UIView.animateWithDuration(highlightTime, delay: 0.0, options: .CurveLinear & .AllowUserInteraction & .BeginFromCurrentState,
+        UIView.animateWithDuration(highlightTime, delay: 0.0, options: [.CurveLinear, .AllowUserInteraction, .BeginFromCurrentState],
             animations: {
                 button.backgroundColor = highlightColor
             }, completion: { finished in
@@ -87,7 +87,7 @@ class ViewController: UIViewController, UIAlertViewDelegate {
         var buttonTag : Int = sender.tag
 
         if let colorTouched = ButtonColor(rawValue: buttonTag) {
-            if currentPlayer == .Comupter {
+            if currentPlayer == .Computer {
                 // ignore touches as long as this flag is set to true
                 return
             }
@@ -118,31 +118,31 @@ class ViewController: UIViewController, UIAlertViewDelegate {
         startGame()
     }
 
-    func playerWins(Void) {
+    func playerWins(_: Void) {
         var winner : UIAlertView = UIAlertView(title: "You won!", message: "Congratulations!", delegate: self, cancelButtonTitle: nil,
             otherButtonTitles: "Awesome!")
         winner.show()
     }
 
-    func playerLoses(Void) {
+    func playerLoses(_: Void) {
         var winner : UIAlertView = UIAlertView(title: "You lost!", message: "Sorry!", delegate: self, cancelButtonTitle: nil,
             otherButtonTitles: "Try Again!")
         winner.show()
     }
 
-    func randomButton(Void) -> ButtonColor {
+    func randomButton(_: Void) -> ButtonColor {
         var v : Int = Int(arc4random_uniform(UInt32(4))) + 1
         var result = ButtonColor(rawValue: v)
         return result!
     }
 
-    func startGame(Void) -> Void {
+    func startGame(_: Void) -> Void {
         // randomize the input array
         inputs = [ButtonColor]()
         advanceGame()
     }
 
-    func advanceGame(void) -> Bool {
+    func advanceGame(_: Void) -> Bool {
         var result : Bool = true
 
         if inputs.count == winningNumber {
