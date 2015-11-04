@@ -56,6 +56,12 @@
                             <constraint firstItem="Pxv-oT-Pfd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WTr-uh-bZM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueButton" destination="CdQ-eX-zOs" id="GgC-aw-e52"/>
+                        <outlet property="greenButton" destination="IKH-Yb-Jg8" id="4P6-U8-gt6"/>
+                        <outlet property="redButton" destination="mLl-fQ-esM" id="9MR-4p-Lge"/>
+                        <outlet property="yellowButton" destination="v0D-VN-b2Y" id="idk-6s-Ibo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
