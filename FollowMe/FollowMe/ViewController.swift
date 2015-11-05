@@ -33,7 +33,7 @@ class ViewController: UIViewController, UIAlertViewDelegate {
     var currentPlayer : WhoseTurn = .Computer
     var inputs = [ButtonColor]()
     var indexOfNextButtonToTouch : Int = 0
-    var highlightSquareTime = 0.1 // 0.5 previously
+    var highlightSquareTime = 0.5 // 0.1 to fast
 
     override func viewDidLoad() {
 //        super.viewDidLoad()
